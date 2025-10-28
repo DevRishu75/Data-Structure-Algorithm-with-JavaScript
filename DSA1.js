@@ -19,4 +19,8 @@ console.log("sum of 10 and 20"+a+b) // string
 // but we need to add a+b so we use BODMAS
 console.log("sum of 10 and 20 is "+(a+b)) // string sum of 10 and 20 is 30
 console.log(a+b+"is sum of 10 and 20") // string // 30 is sum of 10 and 20
-console.log("1"+1)
+console.log("1"/1);//number 1
+console.log("1"*1);//number 1
+console.log("1"-1);//number 1
+// here javascript converts "1" to a number type 1
+console.log("1"%1) // number 0
