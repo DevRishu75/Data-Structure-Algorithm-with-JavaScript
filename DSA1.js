@@ -106,7 +106,14 @@ console.log(10!=11)
 // let a = 10++;// this gives an error because we can't give a number ++ operator
 
 // console.log(a)/
-let i = 11;
-let b = ++(a++)
-console.log(b)
+// let i = 10;
+// let b = ++(a++) // this will solve like a++ =  10 first and it will like ++10 and now it shows const function
+// console.log(b) // this gives an error 
+// math.function///
+console.log(Math.round(10.3))//10
+console.log(Math.round(10.8))//11
 
+console.log(Math.ceil(10.1))//11
+console.log(Math.floor(10.8))//10
+console.log(Math.trunc(18.89))//18 just removes after point 
+console.log(Math.pow(2,5))//2**5 power 
