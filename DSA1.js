@@ -28,5 +28,27 @@
 // age = Number(age);
 // console.log(age)
 // console.log(typeof age); // prompt default takes the input in string and if we need it in number 
-let age = Number(prompt("Enter your age ")); // Number is a parameter and prompt is a function
-console.log(age);
+// typecasting or typeconversing
+// let age = Number(prompt("Enter your age ")); // Number is a parameter and prompt is a function
+// console.log(age); 
+
+
+
+// Swapping 
+// first method
+//swap with extra variable
+// let a = 10;
+// let b = 20;
+// let c 
+// c = a; // now only copy of a is gone to  // c = 10, a = 10
+// a = b; // a = 20, b = 20
+// b = c; // c= 10, b = 10
+// console.log(a,b) //20,10
+
+//second method
+// let a = 10;
+// let b = 20;
+// a = a+b; // a = 30
+// b = a-b; // 30 - 20 = 10
+// a = a-b;
+// console.log(a,b); // a = 20,b = 10
