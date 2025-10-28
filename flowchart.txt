@@ -1,0 +1,13 @@
+flowchart is used to approach the solution of any question 
+pseudoCode is generic way of representing loogic
+like pseudoCode for sum of 2 no
+
+Read 2 no. , A & B
+sum = A+B
+print sum
+That's a pseudoCode
+like for Simple Interest pseudoCode
+Read P,R & T   In memeory Allocation P R T wil be stored 
+SI = (P*R*T) /100  
+print SI
+end
