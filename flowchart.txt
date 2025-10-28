@@ -25,4 +25,11 @@ start
 Read n
 if n%2 = 0
 print even
-else oden
+else odd
+question Print 1 to n numbers
+pseudoCode
+start
+Read n // to where we need to print the number
+let number = 1 number<n 
+print number 
+number = number+1 // now number is 2
