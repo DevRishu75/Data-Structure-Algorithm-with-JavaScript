@@ -122,5 +122,23 @@ console.log(Math.cbrt(125)); // cuberoot
 console.log(Math.abs(-15)); // convert negative to positive
 console.log(Math.max(78,65,12)); // Max value return 
 console.log(Math.min(78,54,10)); // Min value return
-console.log(Math.random()); // return value between 0 to 1
+console.log(Math.floor(Math.random()*9000)+1000); // return value between 0 to 1 and now it will return from 1000 to 9999
+// let a = 89.09835;
+// console.log(a.toFixed(2)); // now we will only get 2 digits after  point but it makes it string
 
+// let a = 5
+// let b =7
+// let Area = a*b
+// // console.log(`Area of rectangle  is ${Area}`)
+// let parameter = 2*(a+b)
+// console.log(`Parameter of Rectangle is ${parameter}`)
+// Area of triangle by heron's formula//
+// let a = 5
+// let b = 5
+// let c = 3
+// let s = (a+b+c)/2
+// console.log(s)
+// console.log(Math.sqrt(s * (s-a) * (s-b) * (s-c)))
+
+let r = 12;
+console.log(Number((2*Math.PI*r).toFixed(2)));
