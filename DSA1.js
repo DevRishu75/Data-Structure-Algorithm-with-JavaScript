@@ -117,3 +117,10 @@ console.log(Math.ceil(10.1))//11
 console.log(Math.floor(10.8))//10
 console.log(Math.trunc(18.89))//18 just removes after point 
 console.log(Math.pow(2,5))//2**5 power 
+console.log(Math.sqrt(25));// squareroot
+console.log(Math.cbrt(125)); // cuberoot
+console.log(Math.abs(-15)); // convert negative to positive
+console.log(Math.max(78,65,12)); // Max value return 
+console.log(Math.min(78,54,10)); // Min value return
+console.log(Math.random()); // return value between 0 to 1
+
