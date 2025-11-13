@@ -109,3 +109,89 @@
 //         }
 //     }
 // }
+// process.stdout.write("hello")
+// process.stdout.write("world") // this is a node environment function 
+// console.log("hello") // This is a window function // 
+
+// for taking the prompt or like input to node we need to install package//
+
+let prompt = require('prompt-sync')(); // To take input in node terminal
+let n = Number(prompt("Enter a number "));
+// process.stdout.write(a) // To print in node terminal but not on browser console. // but console.log works on both browser and node terminal 
+// for(let i = 1; i<=n; i++){
+//     for(let j = 1; j<=n;j++){
+//          process.stdout.write("* ")
+//         // console.log(i,j)
+//     }
+//     console.log();
+   
+// }
+// Right Angle Triangle //
+// for(let i =1; i<=n;i++){
+//     let ascii = 65;
+//     for(let j = 1;j<=i;j++){
+//         process.stdout.write(String.fromCharCode(ascii)+" ")
+//         ascii++
+//         // console.log(j)
+        
+//     }
+//      console.log();
+   
+// // } 
+// for(let i =1; i<=n;i++){
+//     for(let j = n;j>=i;j--){
+//         process.stdout.write("     *")
+       
+//         // console.log(j)
+        
+//     }
+//      console.log();
+   
+// } 
+// mirror right angle triangle//
+// for(let i =1; i<=n;i++){
+ 
+//         // inverted first//
+//         for(let j = n; j>=i;j--){
+//             process.stdout.write(" ")
+//         }
+//      // Right Angle
+ 
+//         for(let j = 1; j<=i; j++){
+//             process.stdout.write("*")
+        
+//      }
+//      console.log();
+// }
+// mirror inverted right angle triangle//
+// for(let i = 1; i<=n;i++){
+//     for(let j=1;j<=i;j++){
+//         process.stdout.write(" ")
+//     }
+//     for(let j =n;j>=i;j--){
+//         process.stdout.write("*")
+//     }
+//     console.log();
+// }
+// equilateral triangle//
+// for(let i =1;i<=n;i++){
+//     for(let j=n;j>=i;j--){
+//         process.stdout.write("_")
+//     }
+//     for(let j = 1;j<=i;j++){
+//         process.stdout.write(" *") // A little space//
+//     }
+//     console.log();
+// }
+// Inverted equlateral triangle//
+// for(let i = 1;i<=n;i++){
+//     for(let j = 1;j<=i;j++){
+//         process.stdout.write(" ")
+//     }
+//     for(let j = n; j>=i;j--){
+//         process.stdout.write(" *")
+//     }
+//     console.log(); // for a new line after each loop iteration after a new row
+// }
+
+
