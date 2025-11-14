@@ -193,5 +193,80 @@ let n = Number(prompt("Enter a number "));
 //     }
 //     console.log(); // for a new line after each loop iteration after a new row
 // }
+// X pattern triangle//
+// for(let i = 1; i<=n;i++){
+//     for(let j=1; j<=n;j++){
+//         if(i+j==n+1||i==j){
+//             process.stdout.write("* ")
+//         }
+//         else{
+//             process.stdout.write("  ")
+//         }
+//     }
+//     console.log(); // x pattern is only possible for n = odd number it will clash
+// }
 
+// for(let i = 1; i<=n;i++){
+//     for(let j=1; j<=(2*n-1);j++){
+//        if(i==j||i+j==(2*n)){
+//         process.stdout.write(" *")
+//        }
+//        else process.stdout.write("  ")
+//     }
+//     console.log(); // V pattern 
+// }
 
+// for(let i =1;i<=n;i++){
+//     for(let j=n;j>=i;j--){
+//         process.stdout.write(" ") // spaces
+//     }
+    
+//     for(let j = 1; j<=2*i-1;j++){
+//         process.stdout.write("*")
+//     }
+// console.log();
+
+// }
+// for (let i = n - 1; i >= 1; i--) {
+//     for (let j = n; j >= i; j--) {
+//         process.stdout.write("_");
+//     }
+
+//     for (let j = 1; j <= 2 * i - 1; j++) {
+//         process.stdout.write("*");
+//     }
+//     console.log();
+// }
+// Hollow square//
+// for(let i = 1;i<=n;i++){
+//     for(let j =1;j<=n;j++){
+//         if(i===1||i==n||j===1||j===5){
+//             process.stdout.write("*")
+//         }
+//         else{
+//             process.stdout.write(" ")
+//         }
+//     }
+//     console.log();
+    
+    
+// }
+// Hollow pyramid//
+
+for(let i = 1; i<n;i++){
+    for(let j=n;j>i;j--){
+        process.stdout.write(" ")
+    }
+    for(let j=1;j<=2*i-1;j++){
+        if(j===1||j===2*i-1){
+            process.stdout.write("*")
+        }
+        else{
+            process.stdout.write(" ")
+        }
+    }
+    console.log()
+}
+for(let i = 1; i<2*n;i++){
+    process.stdout.write("*")
+}
