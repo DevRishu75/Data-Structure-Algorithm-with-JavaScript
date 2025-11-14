@@ -89,7 +89,7 @@
 // }
 // console.log(Fmin)
 // console.log(Smin)
-let arr = [90,50,80,100,15,15,15,85];
+// let arr = [90,50,80,100,15,15,15,85];
 // let rever =[];
 // let j = 0; // take it as index for rever array
 // for(let i = arr.length-1;i>=0;i--){
@@ -100,5 +100,66 @@ let arr = [90,50,80,100,15,15,15,85];
 // }
 // // // console.log(arr)
 // console.log(rever)
-console.log(arr.reverse())
+// console.log(arr.reverse())
 
+// let i = 0 , j = arr.length-1;
+// while(i!==j){
+//     let temp = arr[i];
+//     arr[i] = arr[j];
+//     arr[j]= temp
+//     i++;
+//     j--;
+// }
+// console.log(arr)
+
+// let arr = [0,1,0,1,0,1,0,1,1];
+// let j = 0;
+// for(let i =0;i<arr.length;i++){
+//     if(arr[i]===0){
+//         let temp = arr[j];
+//         arr[j] = arr[i];
+//         arr[i]=temp;
+//         j++;
+//     }
+// }
+// console.log(arr)
+// let j = 0;
+// for(let i =0; i<arr.length;i++){
+// if (arr[i] === 0) {
+//     if (i !== j) {
+//         [arr[i], arr[j]] = [arr[j], arr[i]];
+//     }
+//     j++;
+// }
+// }
+// console.log(arr)
+// MOVE ALL NEGATIVE TO LEFT AND +VE TO RIGHT//
+let arr = [-10,20,-30,50,80,-70,-90];
+let j = 0;
+
+// for(let i = 0; i<arr.length;i++){
+//     // if(arr[i]<0){
+//     //     if(i!==j){
+//     //         [arr[i],arr[j]] = [arr[j],arr[i]]
+//     //     }
+//     //     j++;
+//     // }
+//     // if(arr[i]<0){
+//     //     let temp = arr[j];
+//     //     arr[j] = arr[i];
+//     //     arr[i] = temp;
+//     //     j++;
+//     // }
+// }
+// WHILE LOOP
+// let i = 0; 
+// while(i<arr.length){
+//      if(arr[i]<0){
+//         let temp = arr[j];
+//         arr[j] = arr[i];
+//         arr[i] = temp;
+//         j++;
+//     }
+//     i++;
+// }
+console.log(arr)
