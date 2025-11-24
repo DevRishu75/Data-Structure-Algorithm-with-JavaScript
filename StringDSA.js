@@ -53,20 +53,21 @@ let s = "rishabh world"
 let prompt = require("prompt-sync")()
 let pali = prompt("Enter a string: ")
 
-let i =0;
-let j =pali.length-1;
-let pallindrome = false
-while(i<=j){
-    if(pali[i].toLowerCase()===pali[j].toLowerCase()){
-        i++;
-        j--;
-        pallindrome = true
+// let i =0;
+// let j =pali.length-1;
+// let pallindrome = false
+// while(i<=j){
+//     if(pali[i].toLowerCase()===pali[j].toLowerCase()){
+//         i++;
+//         j--;
+//         pallindrome = true
        
-    }
-    else{
-        console.log(" No pallindrome")
-        break;
-    }
-}
-if(pallindrome)console.log(" Yes Pallindrome")
-console.log(pallindrome)
+//     }
+//     else{
+//         console.log(" No pallindrome")
+//         break;
+//     }
+// }
+// if(pallindrome)console.log(" Yes Pallindrome")
+// console.log(pallindrome)
+
