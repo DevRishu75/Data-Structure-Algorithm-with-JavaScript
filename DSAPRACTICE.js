@@ -89,7 +89,32 @@
 //    else if(arr[i]-minPrice>maxProf){
 //         maxProf = arr[i] -  minPrice
 //     }
-
 // }
 // console.log(maxProf)
+// Strong Number //
+// let n = 285;
+// let sum = 0;
+// let temp = n
+
+// while(n >0){
+//     let f = 1;
+//     rem = n%10;
+    
+//     for(let i = 1;i<=rem;i++){
+//         f = f*i;
+      
+//     }
+//      sum+=f;
+     
+//     n = Math.floor(n/10);
+// }
+// if(sum === temp){
+//     console.log("This is a strong number ", sum)
+// }
+// else{
+//     console.log("Sorry the sum is not equal to number ", sum)
+// }
+
+
+
 
