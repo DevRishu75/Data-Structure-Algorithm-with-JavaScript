@@ -56,65 +56,112 @@
 //     arr[arr.length-1] = copy;
 // }
 // console.log(arr)
-// Right rotation by k 
-// for(let j= 1;j<=k;j++){
+
+// }
+// Right rotation by k Element//
+// let arr = [1,4,5,8,9]
+// let k = 9;
+// k = k%arr.length;
+
+// for(let i=1;i<=k;i++){
 //     let copy = arr[arr.length-1];
-//     for(let i = arr.length-1;i>=1;i--){
-//         arr[i] = arr[i-1];
+//     for(let j=arr.length-1;j>=1;j--){
+//         arr[j] = arr[j-1];
 //     }
-//     arr[0] = copy;
+//     arr[0]=copy;
 // }
 // console.log(arr)
-// Remove duplicate elements from an array//
-// let arr = [0,0,1,1,1,2,2,3,3,4]
-// let j =1;
-// let i =0;
+// Remove duplicate Elements from Sorted Arrays//
+// let arr = [0,0,1,1,2,2,3,4,4,5]
+// let i=0;
+// let j=1;
 // while(i<arr.length-1){
 //     if(arr[i]!=arr[i+1]){
-//         arr[j] = arr[i+1]
+//         arr[j]=arr[i+1]
 //         j++
 //     }
 //     i++;
-    
+// }
+
+// console.log(arr)
+// // Best time to buy and sell stock//
+// let arr = [7,1,4,5,8,9]
+// let minPrice = arr[0];
+// let maxProfit = 0;
+
+// for(let i=1;i<arr.length;i++){
+//     if(arr[i]<minPrice){
+//         minPrice = arr[i];
+//     }
+//     else if(arr[i]-minPrice>maxProfit){
+//         maxProfit = arr[i]-minPrice;
+
+//     }
+// }
+// console.log(maxProfit)
+//Best time to buy and sell stock ||//
+// let arr = [1,7,2,8,9]
+// let profit =0;
+// for(let i=0;i<arr.length-1;i++){
+//     if(arr[i+1]>arr[i]){
+//         profit+=arr[i+1] -arr[i]
+       
+//     }
+   
+// }
+// console.log(profit)
+// Sort the color//
+// let arr =[0,1,0,2,0,1,2,1,2];
+// let i =0;
+// let j=0;
+// let k=arr.length-1;
+// while(i<k){
+//     if(arr[k]===2){
+//         k--;
+//     }
+//     else if(arr[i]===0){
+//         [arr[j],arr[i]] = [arr[i],arr[j]]
+//         i++;
+//         j++;
+//     }
+//     else if(arr[i]===2){
+//         [arr[k],arr[i]] = [arr[i],arr[k]]
+//         k--;
+//     }
+//     else{
+//         i++;
+//     }
+
 // }
 // console.log(arr)
-// Best time to buy stock and sell//
-// let arr = [7,4,1,5,2,8]
-// let minPrice = arr[0];
-// let maxProf = 0;
+// Kadane'sAlgorithm//
+
+// let arr = [-2,5,-9,8,7,-8,9,5,7]
+// let sum =0;
+// let maxsum = 0;
 // for(let i=0;i<arr.length;i++){
-//     if(arr[i] < minPrice){
-//         minPrice = arr[i]
+//     sum+=arr[i];
+//     if(sum>maxsum){
+//         maxsum = sum;
 //     }
-//    else if(arr[i]-minPrice>maxProf){
-//         maxProf = arr[i] -  minPrice
+//     if(sum<0){
+//         sum =0;
 //     }
 // }
-// console.log(maxProf)
-// Strong Number //
-// let n = 285;
-// let sum = 0;
-// let temp = n
-
-// while(n >0){
-//     let f = 1;
-//     rem = n%10;
-    
-//     for(let i = 1;i<=rem;i++){
-//         f = f*i;
-      
-//     }
-//      sum+=f;
-     
-//     n = Math.floor(n/10);
-// }
-// if(sum === temp){
-//     console.log("This is a strong number ", sum)
-// }
-// else{
-//     console.log("Sorry the sum is not equal to number ", sum)
-// }
-
-
-
-
+// console.log(maxsum)
+// Majority voting //
+let arr  = [1,1,1,2,2,2,1,1,2,2,2]
+let count = 1;
+let ans = arr[0];
+for(let i=1;i<arr.length;i++){
+    if(arr[i]===ans){
+        count++;
+    }
+    else {
+        count--
+    }
+    if(count<0){
+        ans = arr[i]
+    }
+}
+console.log(ans)
