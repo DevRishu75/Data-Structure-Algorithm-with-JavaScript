@@ -150,18 +150,58 @@
 // }
 // console.log(maxsum)
 // Majority voting //
-let arr  = [1,1,1,2,2,2,1,1,2,2,2]
-let count = 1;
-let ans = arr[0];
-for(let i=1;i<arr.length;i++){
-    if(arr[i]===ans){
-        count++;
+// let arr  = [1,1,1,2,2,2,1,1,2,2,2]
+// let count = 1;
+// let ans = arr[0];
+// for(let i=1;i<arr.length;i++){
+//     if(arr[i]===ans){
+//         count++;
+//     }
+//     else {
+//         count--
+//     }
+//     if(count<0){
+//         ans = arr[i]
+//     }
+// }
+// console.log(ans)
+// Bubble Sort //
+// let arr = [10,50,40,35,60];
+// let n = arr.length;
+// for(let i=0;i<n-1;i++){
+//     for(let j=0;j<n-1-i;j++){
+//         if(arr[j]>arr[j+1]){
+//             [arr[j],arr[j+1]] = [arr[j+1],arr[j]]
+//         }
+        
+//     }
+// }
+// console.log(arr)
+// selection Sort//
+// let arr = [10,45,12,15,58]
+
+// for(let i=0;i<arr.length;i++){
+//     for(let j=i+1;j<arr.length;j++){
+//         if(arr[j]<arr[i]){
+//             [arr[j],arr[i]] =  [arr[i],arr[j]]
+//         }
+//     }
+// }
+// console.log(arr)
+// ALi bhai selection Sort
+let arr = [10,45,12,15,58]
+
+for(let i=0;i<arr.length;i++){
+    let min = i;
+    for(let j=i+1;j<arr.length;j++){
+        if(arr[j]<arr[min]){
+            min = j
+        }
     }
-    else {
-        count--
-    }
-    if(count<0){
-        ans = arr[i]
+    if(min!=i){
+        let temp = arr[min]
+        arr[min] = arr[i]
+        arr[i] = temp
     }
 }
-console.log(ans)
+console.log(arr)
