@@ -189,19 +189,45 @@
 // }
 // console.log(arr)
 // ALi bhai selection Sort
-let arr = [10,45,12,15,58]
+// let arr = [10,45,12,15,58]
 
-for(let i=0;i<arr.length;i++){
-    let min = i;
-    for(let j=i+1;j<arr.length;j++){
-        if(arr[j]<arr[min]){
-            min = j
-        }
+// for(let i=0;i<arr.length;i++){
+//     let min = i;
+//     for(let j=i+1;j<arr.length;j++){
+//         if(arr[j]<arr[min]){
+//             min = j
+//         }
+//     }
+//     if(min!=i){
+//         let temp = arr[min]
+//         arr[min] = arr[i]
+//         arr[i] = temp
+//     }
+// }
+// console.log(arr)
+// Tapping Rain Water question//
+let arr = [1,4,0,2,3,1,6]
+let right = new Array(arr.length);
+let left = new Array(arr.length);
+let rightmax = arr[arr.length-1];
+let leftmax = arr[0];
+right[right.length-1] = rightmax;
+left[0] = leftmax;
+
+for(let i=1;i<arr.length;i++){
+    if(arr[i]>leftmax){
+        leftmax = arr[i]
     }
-    if(min!=i){
-        let temp = arr[min]
-        arr[min] = arr[i]
-        arr[i] = temp
-    }
+    left[i] = leftmax;
 }
-console.log(arr)
+for(let i=arr.length-2;i>=0;i--){
+    if(arr[i]>rightmax){
+        rightmax = arr[i]
+    }
+    right[i] = rightmax
+}
+let ans = 0;
+for(let i=0;i<arr.length;i++){
+    ans+= Math.min(right[i],left[i]) - arr[i]
+}
+console.log(ans)
