@@ -205,29 +205,127 @@
 //     }
 // }
 // console.log(arr)
-// Tapping Rain Water question//
-let arr = [1,4,0,2,3,1,6]
-let right = new Array(arr.length);
-let left = new Array(arr.length);
-let rightmax = arr[arr.length-1];
-let leftmax = arr[0];
-right[right.length-1] = rightmax;
-left[0] = leftmax;
+// // Tapping Rain Water question//
+// let arr = [1,4,0,2,3,1,6]
+// let right = new Array(arr.length);
+// let left = new Array(arr.length);
+// let rightmax = arr[arr.length-1];
+// let leftmax = arr[0];
+// right[right.length-1] = rightmax;
+// left[0] = leftmax;
 
-for(let i=1;i<arr.length;i++){
-    if(arr[i]>leftmax){
-        leftmax = arr[i]
-    }
-    left[i] = leftmax;
-}
-for(let i=arr.length-2;i>=0;i--){
-    if(arr[i]>rightmax){
-        rightmax = arr[i]
-    }
-    right[i] = rightmax
-}
-let ans = 0;
-for(let i=0;i<arr.length;i++){
-    ans+= Math.min(right[i],left[i]) - arr[i]
-}
-console.log(ans)
+// for(let i=1;i<arr.length;i++){
+//     if(arr[i]>leftmax){
+//         leftmax = arr[i]
+//     }
+//     left[i] = leftmax;
+// }
+// for(let i=arr.length-2;i>=0;i--){
+//     if(arr[i]>rightmax){
+//         rightmax = arr[i]
+//     }
+//     right[i] = rightmax
+// }
+// let ans = 0;
+// for(let i=0;i<arr.length;i++){
+//     ans+= Math.min(right[i],left[i]) - arr[i]
+// }
+// console.log(ans)
+// Recursion Questions Practice//
+// Fibonacci number//
+// function fibo(n){
+//     if(n===0||n===1) return n;
+//     return fibo(n-1) + (fibo(n-2))
+// }
+// console.log(fibo(7))
+// fibonacci Series using Recursion//
+// function fibonacci(n,first,second){
+//     if(n===0)return;
+//     let third = first+second;
+//     return fibonacci(n-1,second,third)
+// }
+// // Occurence using recursion //
+// let arr = [1,2,3,2,3,4,5]
+// function Ocurr(arr,x,i=0){
+//     if(i===arr.length) return 0;
+//     if(arr[i]===x){
+//         return 1+ Ocurr(arr,x,i+1)
+//     }
+//     return  Ocurr(arr,x,i+1)
+// }
+// console.log(Ocurr(arr,3))
+// Sum of Array ELement using Recurssion//
+// let arr = [1,4,5,86,9,10]
+// function sum(arr,i=0){
+//     if(i===arr.length) return 0;
+//     return arr[i] + sum(arr,i+1)
+// }
+// console.log(sum(arr))a
+// Maximum Element using Recursion//
+// let arr = [1,2,15,17,89,5]
+// function Max(arr,max = arr[0],i=0){
+//     if(i===arr.length) return max;
+//     if(arr[i]>max){
+//         max = arr[i]
+//     }
+//     return Max(arr,max,i+1)
+// }
+// console.log(Max(arr))
+// check string is a palindrome or not //
+// function Pali(s,i=0,j=s.length-1){
+//     if(i>j) return true;
+//     if(s[i].toLowerCase()!==s[j].toLowerCase()) return false;
+//     return Pali(s,i+1,j-1)
+// }
+// console.log(Pali("Naman"))
+// Find theFactor//
+// let n =37;
+//  for(let i=1;i<=Math.floor(Math.sqrt(n));i++){
+//     if(n%i===0){
+//         process.stdout.write(i+" ")
+//     }
+//  }
+//  for(let i=Math.floor(Math.sqrt(n));i>=0;i--){
+//     if(n%i===0){
+//         if(n/i!==i)
+//         process.stdout.write(n/i+" ")
+//     }
+//  }
+// Find the Highest common factor//
+// function HCF(a,b){
+//     while(a!=b){
+//         if(a>b){
+//             a = a-b;
+//             if(a%b==0) return a;
+//         }
+//         else if(b>a){
+//             b = b-a;
+//             if(b%a ==0)return b;
+//         }
+//     }
+// }
+// console.log(HCF(100,45))
+// Fing the Highest Common Factor // using recursion//
+// function HCF(a,b){
+//     if(b==0) return a;
+//     return HCF(b,a%b)
+// }
+// console.log(HCF(70,50))
+//  Prime Number seve enthosis algorithm//
+// let n =30;
+// let arr = new Array(n+1).fill(true);
+
+// for(let i=2;i<=Math.floor(Math.sqrt(n));i++){
+//     if(arr[i]==true){
+//         for(let j = i*i;j<=n;j+=i){
+//             arr[j]=false;
+//         }
+//     }
+// }
+// for(let i=2;i<arr.length;i++){
+//     if(arr[i]==true){
+//         process.stdout.write(i+" ")
+//     }
+// }
+// POW // 
+
