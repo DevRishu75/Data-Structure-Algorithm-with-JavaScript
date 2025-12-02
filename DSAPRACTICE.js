@@ -350,21 +350,21 @@
 // }
 // console.log(POW(2,10))
 // sqrt //
-function Sqrt(x){
-    let left = 1;
-    let right = Math.floor(x/2);
-    while(left<=right){
-        let mid = Math.floor((left+right)/2)
-        let sq = mid*mid;
-        if(sq===x)return mid;
-        else if(sq<x){
-            left = mid+1;
-        }
-        else if(sq>x){
-            right = mid-1;
-        }
-    }
-    return right;
+// function Sqrt(x){
+//     let left = 1;
+//     let right = Math.floor(x/2);
+//     while(left<=right){
+//         let mid = Math.floor((left+right)/2)
+//         let sq = mid*mid;
+//         if(sq===x)return mid;
+//         else if(sq<x){
+//             left = mid+1;
+//         }
+//         else if(sq>x){
+//             right = mid-1;
+//         }
+//     }
+//     return right;
 
-}
-console.log(Sqrt(15))
+// }
+// console.log(Sqrt(15))
