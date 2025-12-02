@@ -152,31 +152,52 @@
 
 // console.log(pref);
 // 3Sum //
-let arr = [-1,0,1,2,-1,-4]
-arr.sort((a, b) => a - b);
+// let arr = [-1,0,1,2,-1,-4]
+// arr.sort((a, b) => a - b);
 
   
-// console.log(newArr)
-for(let i=0;i<arr.length;i++){
-    if(arr[i] === arr[i+1]){
-        continue;
-    }
-  let j=i+1;
-    let k=arr.length-1
-    while(j<k){
-        if(arr[j]+arr[k]+arr[i]>0){
-            k--
-        }
-        else if(arr[j]+arr[k]+arr[i]<0){
-            j++
-        }
-        else{
-            
-             j++;
-             k--;
+// // console.log(newArr)
+// for(let i=0;i<arr.length;i++){
+//     if(arr[i] === arr[i+1]){
+//         continue;
+//     }
+//   let j=i+1;
+//     let k=arr.length-1
+//     while(j<k){
+//         if(arr[j]+arr[k]+arr[i]>0){
+//             k--
+//         }
+//         else if(arr[j]+arr[k]+arr[i]<0){
+//             j++
+//         }
+//         else{
+            //   console.log([arr[i],arr[j],arr[k]])
+//              j++;
+//              k--;
              
-        }
-         console.log([arr[i],arr[j],arr[k]])
-    }
+//         }
+       
+//     }
    
+// }
+var threeSum = function(nums) {
+    nums.sort((a,b)=> a-b);
+    for(let i=0;i<nums.length;i++){
+        let j=i+1;
+        let k=nums.length-1;
+        while(j<k){
+            if(nums[i]+nums[j]+nums[k]>0){
+                k--
+            }
+            else if(nums[i]+nums[j]+nums[k]<0){
+                j++
+            }
+            else{
+                return [[nums[i],nums[j],nums[k]]]
+                j++;
+                k--;
+            }
+        }
+    }
 }
+threeSum([-1,0,1,2,-1,-4])

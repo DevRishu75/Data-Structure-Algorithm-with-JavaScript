@@ -271,54 +271,39 @@
 //     return Max(arr,max,i+1)
 // }
 // console.log(Max(arr))
-// check string is a palindrome or not //
+// check if a string is palindrome//
 // function Pali(s,i=0,j=s.length-1){
 //     if(i>j) return true;
-//     if(s[i].toLowerCase()!==s[j].toLowerCase()) return false;
+//     if(s[i].toLowerCase()!==s[j].toLowerCase()){
+//         return false
+//     }
 //     return Pali(s,i+1,j-1)
 // }
-// console.log(Pali("Naman"))
-// Find theFactor//
-// let n =37;
-//  for(let i=1;i<=Math.floor(Math.sqrt(n));i++){
-//     if(n%i===0){
-//         process.stdout.write(i+" ")
-//     }
-//  }
-//  for(let i=Math.floor(Math.sqrt(n));i>=0;i--){
-//     if(n%i===0){
-//         if(n/i!==i)
-//         process.stdout.write(n/i+" ")
-//     }
-//  }
-// Find the Highest common factor//
-// function HCF(a,b){
-//     while(a!=b){
-//         if(a>b){
-//             a = a-b;
-//             if(a%b==0) return a;
-//         }
-//         else if(b>a){
-//             b = b-a;
-//             if(b%a ==0)return b;
-//         }
-//     }
-// }
-// console.log(HCF(100,45))
-// Fing the Highest Common Factor // using recursion//
-// function HCF(a,b){
-//     if(b==0) return a;
-//     return HCF(b,a%b)
-// }
-// console.log(HCF(70,50))
-//  Prime Number seve enthosis algorithm//
-// let n =30;
-// let arr = new Array(n+1).fill(true);
+// console.log(Pali("Naveen"))
 
+// fibonacci series using recursion//
+// function fibo(n,first,second){
+//     if(n==0) return;
+//     let third = first+second;
+//     process.stdout.write(third+" ")
+//     return fibo(n-1,second,third);
+// }
+// let n=10;
+// process.stdout.write(0+" "+1+" ")
+// fibo(n-2,0,1)
+// fibonacci sum of number n
+// function fibo(n){
+//     if(n==0||n==1)return n;
+//     return fibo(n-1)+fibo(n-2)
+// }
+// console.log(fibo(7))
+// prime //
+// let n = 58;
+// let arr = new Array(n+1).fill(true)
 // for(let i=2;i<=Math.floor(Math.sqrt(n));i++){
 //     if(arr[i]==true){
-//         for(let j = i*i;j<=n;j+=i){
-//             arr[j]=false;
+//         for(let j=i*i;j<=n;j+=i){
+//             arr[j] = false;
 //         }
 //     }
 // }
@@ -327,5 +312,59 @@
 //         process.stdout.write(i+" ")
 //     }
 // }
-// POW // 
+// factors//
+// let n=100;
 
+// for(let i=1;i<=Math.floor(Math.sqrt(n));i++){
+//     if(n%i===0){
+//         process.stdout.write(i+" ")
+//     }
+// }
+// for(let i=Math.floor(Math.sqrt(n));i>=0;i--){
+//     if(n%i===0){
+//         if(n/i!==i){
+//             process.stdout.write(n/i+" ")
+//         }
+//     }
+// }
+// HCF using recursion// seve of erothesis
+// function HCF(a,b){
+//     if(b==0) return a;
+//     return HCF(b,a%b)
+// }
+// console.log(HCF(40,25))
+// POW //
+// function POW(x,n){
+//     if(n==0) return 1;
+//     let ans = temp(x,n)
+//     return n<0 ? 1/ans : ans
+// }
+
+// function temp(x,n){
+//     if(n==0)return 1;
+//     let ans = temp(x,parseInt(n/2));
+//     if(n%2===0){
+//         return ans*ans;
+//     }
+//     else return ans*ans*x
+// }
+// console.log(POW(2,10))
+// sqrt //
+function Sqrt(x){
+    let left = 1;
+    let right = Math.floor(x/2);
+    while(left<=right){
+        let mid = Math.floor((left+right)/2)
+        let sq = mid*mid;
+        if(sq===x)return mid;
+        else if(sq<x){
+            left = mid+1;
+        }
+        else if(sq>x){
+            right = mid-1;
+        }
+    }
+    return right;
+
+}
+console.log(Sqrt(15))
