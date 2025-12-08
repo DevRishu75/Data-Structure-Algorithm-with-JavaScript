@@ -165,206 +165,189 @@
 //     }
 // }
 // console.log(ans)
-// Bubble Sort //
-// let arr = [10,50,40,35,60];
+// Bubble sort //
+// let arr = [1,8,4,9,5,7,12]
 // let n = arr.length;
-// for(let i=0;i<n-1;i++){
+// for(let i=1;i<n-1;i++){
 //     for(let j=0;j<n-1-i;j++){
 //         if(arr[j]>arr[j+1]){
 //             [arr[j],arr[j+1]] = [arr[j+1],arr[j]]
 //         }
-        
 //     }
 // }
 // console.log(arr)
-// selection Sort//
-// let arr = [10,45,12,15,58]
-
-// for(let i=0;i<arr.length;i++){
+// Selection Sort//
+// let arr = [9,8,4,1,5,17,12]
+// for(let i=0;i<arr.length-1;i++){
 //     for(let j=i+1;j<arr.length;j++){
 //         if(arr[j]<arr[i]){
-//             [arr[j],arr[i]] =  [arr[i],arr[j]]
+//             [arr[j],arr[i]] = [arr[i],arr[j]]
 //         }
 //     }
 // }
 // console.log(arr)
-// ALi bhai selection Sort
-// let arr = [10,45,12,15,58]
-
-// for(let i=0;i<arr.length;i++){
-//     let min = i;
-//     for(let j=i+1;j<arr.length;j++){
-//         if(arr[j]<arr[min]){
-//             min = j
-//         }
-//     }
-//     if(min!=i){
-//         let temp = arr[min]
-//         arr[min] = arr[i]
-//         arr[i] = temp
-//     }
-// }
-// console.log(arr)
-// // Tapping Rain Water question//
-// let arr = [1,4,0,2,3,1,6]
-// let right = new Array(arr.length);
-// let left = new Array(arr.length);
-// let rightmax = arr[arr.length-1];
-// let leftmax = arr[0];
-// right[right.length-1] = rightmax;
-// left[0] = leftmax;
+// Insertion Sort//
+// let arr =[9,8,4,1,5,7,12]
 
 // for(let i=1;i<arr.length;i++){
-//     if(arr[i]>leftmax){
-//         leftmax = arr[i]
+//     let key = arr[i];
+//     let j=i-1;
+//     while(j>=0 && arr[j]>key){
+//         arr[j+1] = arr[j]
+//         j--
 //     }
-//     left[i] = leftmax;
+//     arr[j+1] = key
 // }
-// for(let i=arr.length-2;i>=0;i--){
-//     if(arr[i]>rightmax){
-//         rightmax = arr[i]
-//     }
-//     right[i] = rightmax
-// }
-// let ans = 0;
-// for(let i=0;i<arr.length;i++){
-//     ans+= Math.min(right[i],left[i]) - arr[i]
-// }
-// console.log(ans)
-// Recursion Questions Practice//
-// Fibonacci number//
-// function fibo(n){
-//     if(n===0||n===1) return n;
-//     return fibo(n-1) + (fibo(n-2))
-// }
-// console.log(fibo(7))
-// fibonacci Series using Recursion//
-// function fibonacci(n,first,second){
-//     if(n===0)return;
-//     let third = first+second;
-//     return fibonacci(n-1,second,third)
-// }
-// // Occurence using recursion //
-// let arr = [1,2,3,2,3,4,5]
-// function Ocurr(arr,x,i=0){
-//     if(i===arr.length) return 0;
-//     if(arr[i]===x){
-//         return 1+ Ocurr(arr,x,i+1)
-//     }
-//     return  Ocurr(arr,x,i+1)
-// }
-// console.log(Ocurr(arr,3))
-// Sum of Array ELement using Recurssion//
-// let arr = [1,4,5,86,9,10]
-// function sum(arr,i=0){
-//     if(i===arr.length) return 0;
-//     return arr[i] + sum(arr,i+1)
-// }
-// console.log(sum(arr))a
-// Maximum Element using Recursion//
-// let arr = [1,2,15,17,89,5]
-// function Max(arr,max = arr[0],i=0){
-//     if(i===arr.length) return max;
-//     if(arr[i]>max){
-//         max = arr[i]
-//     }
-//     return Max(arr,max,i+1)
-// }
-// console.log(Max(arr))
-// check if a string is palindrome//
-// function Pali(s,i=0,j=s.length-1){
-//     if(i>j) return true;
-//     if(s[i].toLowerCase()!==s[j].toLowerCase()){
-//         return false
-//     }
-//     return Pali(s,i+1,j-1)
-// }
-// console.log(Pali("Naveen"))
-
-// fibonacci series using recursion//
-// function fibo(n,first,second){
-//     if(n==0) return;
-//     let third = first+second;
-//     process.stdout.write(third+" ")
-//     return fibo(n-1,second,third);
-// }
-// let n=10;
-// process.stdout.write(0+" "+1+" ")
-// fibo(n-2,0,1)
-// fibonacci sum of number n
-// function fibo(n){
-//     if(n==0||n==1)return n;
-//     return fibo(n-1)+fibo(n-2)
-// }
-// console.log(fibo(7))
-// prime //
-// let n = 58;
-// let arr = new Array(n+1).fill(true)
-// for(let i=2;i<=Math.floor(Math.sqrt(n));i++){
-//     if(arr[i]==true){
-//         for(let j=i*i;j<=n;j+=i){
-//             arr[j] = false;
+// console.log(arr)
+// Merge Sort//
+// function Merge(arr,first,mid,last){
+//     let i=first;
+//     let j=mid+1;
+//     let k=0;
+//     let temp = new Array(last-first+1);
+//     while(i<=mid&&j<=last){
+//         if(arr[i]<arr[j]){
+//             temp[k] = arr[i]
+//             k++;
+//             i++
+//         }
+//         else if(arr[i]>arr[j]){
+//             temp[k] = arr[j]
+//             k++;
+//             j++;
+//         }
+//         else{
+//             temp[k++] = arr[j++];
+//             temp[k++] = arr[i++];
 //         }
 //     }
-// }
-// for(let i=2;i<arr.length;i++){
-//     if(arr[i]==true){
-//         process.stdout.write(i+" ")
+//     while(i<=mid){
+//         temp[k++] = arr[i++]
+//     }
+//     while(j<=last){
+//         temp[k++] = arr[j++]
+//     }
+//     let p=0;
+//     let t=first;
+//     while(p<temp.length){
+//         arr[t++] = temp[p++]
 //     }
 // }
-// factors//
-// let n=100;
-
-// for(let i=1;i<=Math.floor(Math.sqrt(n));i++){
-//     if(n%i===0){
-//         process.stdout.write(i+" ")
-//     }
+// function divide(arr,first,last){
+//     if(first>=last) return;
+//     let mid = Math.floor((first+last)/2)
+//     divide(arr,first,mid)
+//     divide(arr,mid+1,last)
+//     Merge(arr,first,mid,last)
 // }
-// for(let i=Math.floor(Math.sqrt(n));i>=0;i--){
-//     if(n%i===0){
-//         if(n/i!==i){
-//             process.stdout.write(n/i+" ")
+// let arr = [1,4,8,7,9,12,5,6,25]
+// divide(arr,0,arr.length-1)
+// console.log(arr)
+// Quick Sort//
+// function findPivot(arr,first,last){
+//     let pivot = arr[first]
+//     let i=first+1;
+//     let j=last;
+//     while(i<=j){
+//         while(i<=last&&arr[i]<=pivot) i++;
+//         while(j>=first&&arr[j]>pivot)j--;
+//         if(i<j){
+//             [arr[i],arr[j]] = [arr[j],arr[i]]
 //         }
 //     }
+//     [arr[j],arr[first]] = [arr[first],arr[j]]
+//     return j;
 // }
-// HCF using recursion// seve of erothesis
-// function HCF(a,b){
-//     if(b==0) return a;
-//     return HCF(b,a%b)
+// function partition(arr,first,last){
+//     if(first>=last) return;
+//     let pvInd = findPivot(arr,first,last)
+//     partition(arr,first,pvInd-1);
+//     partition(arr,pvInd+1,last);
 // }
-// console.log(HCF(40,25))
+let arr = [1,4,8,7,9,12,5,6,25]
+// partition(arr,0,arr.length-1)
+// console.log(arr)
+// Binary Search//
+// function BinarySearch(target){
+//     let first = arr[0];
+//     let last = arr.length-1;
+   
+//     while(last>=first){
+//          let mid = Math.floor((first+last)/2);
+//         if(arr[mid]===target) return mid;
+//         else if(arr[mid]>target){
+//             last = mid-1;
+//         }
+//         else {
+//             first = mid+1;
+//         }
+//     }
+//     return `${target} not in array`
+// }
+// console.log(BinarySearch(8))
+// Recursive mode //
+// function binarySearch(arr,target,first,last){
+//     if(last<=first) return -1;
+//     let mid = Math.floor((first+last)/2);
+//     if(arr[mid]===target){
+//         return mid;
+//     }
+//     else if(arr[mid]>target){
+// return binarySearch(arr,target,first,mid-1)
+//     }
+//     else if(arr[mid]<target){
+//        return binarySearch(arr,target,mid+1,last)
+//     }
+// }
+// console.log(binarySearch(arr,8,0,arr.length-1,))
+
 // POW //
 // function POW(x,n){
 //     if(n==0) return 1;
 //     let ans = temp(x,n)
-//     return n<0 ? 1/ans : ans
+//     return n<0 ?1/ans : ans
 // }
-
 // function temp(x,n){
-//     if(n==0)return 1;
+//     if(n==0) return 1;
 //     let ans = temp(x,parseInt(n/2));
-//     if(n%2===0){
-//         return ans*ans;
-//     }
-//     else return ans*ans*x
+//     if(n%2==0){
+//         return ans*ans
+//         }
+//         else {
+//            return  ans*ans*x
+//         }
 // }
 // console.log(POW(2,10))
-// sqrt //
+
+// Sqrt //
 // function Sqrt(x){
-//     let left = 1;
-//     let right = Math.floor(x/2);
-//     while(left<=right){
-//         let mid = Math.floor((left+right)/2)
-//         let sq = mid*mid;
-//         if(sq===x)return mid;
-//         else if(sq<x){
-//             left = mid+1;
+//     let first = 0;
+//     let last = Math.floor(x/2);
+//     while(last>=first){
+//         let mid = Math.floor((first+last)/2)
+//         let pow = mid*mid
+//         if(pow===x) return mid;
+//         else if(pow<x){
+//             first = mid+1
 //         }
-//         else if(sq>x){
-//             right = mid-1;
+//           else if(pow>x){
+//             last = mid-1;
 //         }
 //     }
-//     return right;
-
+//     return last;
 // }
-// console.log(Sqrt(15))
+// console.log(Sqrt(10))
+// SQRT using Recursion//
+// function Sqrt(x,first,last = Math.floor(x/2)){
+//     if(last<first) return last;
+//     let mid = Math.floor((first+last)/2);
+//     let pow = mid*mid
+//     if(pow==x) return mid;
+//     else if(pow<x){
+//         return Sqrt(x,mid+1,last)
+//     }
+//     else if(pow>x){
+//         return Sqrt(x,first,mid-1);
+//     }
+// }
+// console.log(Sqrt(18,0))
