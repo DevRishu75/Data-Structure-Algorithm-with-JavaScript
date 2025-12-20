@@ -41,7 +41,7 @@ function Merge(arr,first,mid,last){
         else if(arr[i]>arr[j]){
             temp[k] = arr[j]
             k++;
-            j++;87
+            j++;
         }
         else{
             temp[k++] = arr[i++];
